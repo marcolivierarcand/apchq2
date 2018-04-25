@@ -1,0 +1,57 @@
+.Header-nav{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo{
+	min-width: 150px;
+}
+
+.Header-nav, .nav-fixed{
+	.outline:hover span{
+		color: $color-main_hover;
+	}
+}
+
+.nav-fixed{
+	z-index: 30;
+	z-index: 5;
+	position: fixed;
+	background-color: $color-light;
+	.list{
+		margin: 0;
+		a{
+			padding: 0.2rem 1.5rem;
+			border-right: 1px solid $color-main_light;
+		}
+		a:last-of-type{
+			border-right: 0;
+		}
+		a li{
+			margin: 0;
+		}
+		a li:hover{
+			text-decoration: underline;
+		}
+	}
+	.mobile-list{
+		margin: 0;
+		top: 80px;
+		left: 0;
+		a{
+			background-color: $color-light;
+			text-decoration: none;
+			display: block;
+			border-top: 1px solid $color-dark;
+		}
+		a:hover{
+			background-color: darken($color-light, 10%);
+		}
+	}
+}
+
+// Section Equipe email
+.hover:hover{
+	text-decoration: underline;
+}

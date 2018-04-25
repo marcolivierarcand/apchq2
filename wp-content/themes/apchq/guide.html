@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#"> <!--OPEN GRAPH PROTOCOL-->
+
+  <!--ASSETS-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <!--/ASSETS-->
+
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="dist/styles.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<!-- Add syntax highlights in the page -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+</head>
+<body>
+
+	<div class="dkit-navigation">
+		<ul class="list lh-2">
+			<li><a href="#" class="link fat c-text">Content</a></li>
+			<li><a href="#" class="link muted hover c-text">Baseline sizes</a></li>
+			<li><a href="#" class="link muted hover c-text">Titles</a></li>
+			<li><a href="#" class="link muted hover c-text">Display</a></li>
+			<li><a href="#" class="link muted hover c-text">Text</a></li>
+			<li><a href="#" class="link muted hover c-text">Text modifiers</a></li>
+			<li><a href="#" class="link muted hover c-text">List styles</a></li>
+			<li><a href="#" class="link muted hover c-text">Tables</a></li>
+			<li><a href="#" class="link muted hover c-text">WYSIWYG helper</a></li>
+		</ul>
+		<ul class="list lh-2 m-t">
+			<li><a href="#" class="link fat c-text">Components</a></li>
+			<li><a href="#" class="link muted hover c-text">Link</a></li>
+			<li><a href="#" class="link muted hover c-text">Link modifiers</a></li>
+			<li><a href="#" class="link muted hover c-text">Button</a></li>
+			<li><a href="#" class="link muted hover c-text">Button modifiers</a></li>
+		</ul>
+	</div>
+
+	<div class="dkit-main">
+		<div class="container col-12">
+
+			<div class="wrapper col-12 m-b m-t">
+				<h1 class="title xlg">Grid & Layout</h1>
+				<p class="text med muted">
+					Documentation on different layout and grid helpers
+				</p>
+				<hr class="dkit-rule" />
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Container</h2>
+				<p class="text">
+					Container is the basic devkit layout element. By default it will apply
+					the bundle max-width and side gutters. Be wary that the container element
+					will not apply the flexbox grid by default. Container can be used in
+					legacy browsers for a fluid container.
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<div class="dkit-example-bg container grid">
+						<p class="text">
+							this is a container element
+						</p>
+					</div>
+				</div>
+				<div class="dkit-code">
+<pre><code class="language-html">&lt;div class=&quot;container grid&quot;&gt;
+	...
+&lt;/div&gt;</code></pre>
+				</div>
+
+			</div>
+
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Grid</h2>
+				<p class="text">
+					The grid class turns any element into an equal parts divisible flexbox
+					grid. If no column number is specified with the <code>.col</code> class
+					it will automatically set the grid columns for you. This is usefull if
+					you have a server rendered app that will render different amount of
+					results and you wish to adapt your UI with it.
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<div class="dkit-example-bg container grid">
+						<div class="col">
+							<p class="text">
+								Split by two
+							</p>
+						</div>
+						<div class="col">
+							<p class="text">
+								Split by two
+							</p>
+						</div>
+					</div><br />
+					<div class="dkit-example-bg container grid">
+						<div class="col">
+							<p class="text">
+								Split by three
+							</p>
+						</div>
+						<div class="col">
+							<p class="text">
+								Split by three
+							</p>
+						</div>
+						<div class="col">
+							<p class="text">
+								Split by three
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Columns</h2>
+				<p class="text">
+					Columns is the best way to play with the grid. Any container with the
+					<code>.grid</code> class can be split by 12 sections, any of those
+					12 childrens can also be split again. You can change the number of
+					columns you want with the <code>$grid-columns</code> variable. If
+					you go over 12 columns for a given row, this column is automatically
+					going to be sent to the next row.
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<div class="dkit-example-bg container grid">
+						<div class="col-6">
+							<p class="text">
+								Uses up half of the grid
+							</p>
+						</div>
+						<div class="col-3">
+							<p class="text">
+								Uses up a quarter
+							</p>
+						</div>
+						<div class="col-3">
+							<p class="text">
+								Uses up a quarter
+							</p>
+						</div>
+					</div><br />
+					<div class="dkit-example-bg container grid">
+						<div class="col-6">
+							<p class="text">
+								col-6 (fits)
+							</p>
+						</div>
+						<div class="col-6">
+							<p class="text">
+								col-6 (fits)
+							</p>
+						</div>
+						<div class="col-6">
+							<p class="text">
+								col-6 (overflowed)
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t-lg">
+				<h1 class="title xlg">Content</h1>
+				<p class="text med muted">
+					Documentation on different text and list styles, in different sizes and colors.
+				</p>
+				<hr class="dkit-rule" />
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Default font sizes</h2>
+				<p class="text">
+					Every elements that contains a font size follow these same sizes
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<p class="text sm muted fat">.xlg</p>
+					<p class="title xlg">3.2rem</p>
+					<p class="text sm muted fat m-t10">.lg</p>
+					<p class="title lg">2.4rem</p>
+					<p class="text sm muted fat m-t10">.med</p>
+					<p class="title med">1.8rem</p>
+					<p class="text sm muted fat m-t10">(default)</p>
+					<p class="title">1.6rem</p>
+					<p class="text sm muted fat m-t10">.sm</p>
+					<p class="title sm">1.3rem</p>
+					<p class="text sm muted fat m-t10">.xsm</p>
+					<p class="title xsm">1rem</p>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Title styles</h2>
+				<p class="text">
+					Everything you need to know about titles
+				</p>
+			</div>
+
+			<div class="wrapper col-12 grid">
+				<div class="dkit-example-display col-12">
+					<p class="text sm muted fat">.title .xlg</p>
+					<p class="title xlg">Some title example</p>
+					<p class="text sm muted fat m-t10">.title .lg</p>
+					<p class="title lg">Some title example</p>
+					<p class="text sm muted fat m-t10">.title .med</p>
+					<p class="title med">Some title example</p>
+					<p class="text sm muted fat m-t10">.title</p>
+					<p class="title">Some title example</p>
+					<p class="text sm muted fat m-t10">.title .sm</p>
+					<p class="title sm">Some title example</p>
+					<p class="text sm muted fat m-t10">.title .xsm</p>
+					<p class="title xsm">Some title example</p>
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title xlg</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title lg</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title med</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title sm</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">title xsm</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some title example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+</code>
+</pre>
+				</div>
+			</div>
+
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Display styles</h2>
+				<p class="text">
+					Special title-like classes for even bigger titles
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<p class="text sm muted fat">.display .lg</p>
+					<p class="display lg">Some display example</p>
+					<p class="text sm muted fat m-t10">.display</p>
+					<p class="display">Some display example</p>
+					<p class="text sm muted fat m-t10">.display .sm</p>
+					<p class="display sm">Some display example</p>
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">display lg</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some display example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">display</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some display example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">display sm</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some display example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+</pre>
+				</div>
+			</div>
+
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Text styles</h2>
+				<p class="text">
+					Everything you need to know about text
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<p class="text sm muted fat">.text .xlg</p>
+					<p class="text xlg">Some text example</p>
+					<p class="text sm muted fat m-t10">.text .lg</p>
+					<p class="text lg">Some text example</p>
+					<p class="text sm muted fat m-t10">.text .med</p>
+					<p class="text med">Some text example</p>
+					<p class="text sm muted fat m-t10">.text</p>
+					<p class="text">Some text example</p>
+					<p class="text sm muted fat m-t10">.text .sm</p>
+					<p class="text sm">Some text example</p>
+					<p class="text sm muted fat m-t10">.text .xsm</p>
+					<p class="text xsm">Some text example</p>
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text xlg</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text lg</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text med</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text sm</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">p</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text xsm</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some text example</span><span class="pr"><</span><span class="gr">/p</span><span class="pr">></span>
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Text modifiers</h2>
+				<p class="text">
+					Everything you need to know about text
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+						<span class="text">Some bit of text <a href="#">with a link</a></span><br>
+						<span class="text">Some bit of text <strong>with strong tags</strong></span><br>
+						<span class="text">Some bit of text <del>that should be deleted</del></span><br>
+						<span class="text">Some bit of text <s>that is no longer accurate</s></span><br>
+						<span class="text">Some bit of text <ins>that has been inserted</ins></span><br>
+						<span class="text">Some bit of text <em>with em tags</em></span><br>
+						<span class="text">Some bit of text <mark>with mark tags</mark></span><br>
+						<span class="text">Some bit of text <u>with u tags</u></span><br>
+						<span class="text">Some bit of text <mark class="c-main">with mark tags color</mark></span><br>
+						<span class="text">Some bit of text <mark class="c-done">with mark tags color</mark></span><br>
+						<span class="text">Some bit of text <mark class="c-alert">with mark tags color</mark></span><br>
+						<span class="text">Some bit of text <mark class="c-warn">with mark tags color</mark></span><br>
+						<span class="text">Some bit of text <span class="c-warn">with warning !</span></span><br>
+						<span class="text">Some bit of text <span class="c-warn fat">with fat warning !</span></span><br>
+						<span class="text">Some bit of text <span class="c-warn fat up">with fat uppercase warning !</span></span><br>
+						<span class="text">Some bit of text <span class="c-alert">with alert !</span></span><br>
+						<span class="text">Some bit of text <span class="c-alert fat">with fat alert !</span></span><br>
+						<span class="text">Some bit of text <span class="c-alert fat up">with fat uppercase alert !</span></span><br>
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">a</span> <span class="pr">href</span><span class="bl">="</span><span class="rd">#</span><span class="bl">"</span><span class="pr">></span><span class="bl">with a link</span><span class="pr"><</span><span class="gr">/a</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">strong</span><span class="pr">></span><span class="bl">with strong tags</span><span class="pr"><</span><span class="gr">/strong</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">del</span><span class="pr">></span><span class="bl">that should be deleted</span><span class="pr"><</span><span class="gr">/del</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">s</span><span class="pr">></span><span class="bl">that is no longer accurate</span><span class="pr"><</span><span class="gr">/s</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">ins</span><span class="pr">></span><span class="bl">that has been inserted</span><span class="pr"><</span><span class="gr">/ins</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">em</span><span class="pr">></span><span class="bl">with em tags</span><span class="pr"><</span><span class="gr">/em</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">u</span><span class="pr">></span><span class="bl">with u tags</span><span class="pr"><</span><span class="gr">/u</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">mark</span><span class="pr">></span><span class="bl">with mark tags</span><span class="pr"><</span><span class="gr">/mark</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">a</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-main</span><span class="bl">"</span><span class="pr">></span><span class="bl">with mark tags color</span><span class="pr"><</span><span class="gr">/a</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">a</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-done</span><span class="bl">"</span><span class="pr">></span><span class="bl">with mark tags color</span><span class="pr"><</span><span class="gr">/a</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">a</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-alert</span><span class="bl">"</span><span class="pr">></span><span class="bl">with mark tags color</span><span class="pr"><</span><span class="gr">/a</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">a</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-warn</span><span class="bl">"</span><span class="pr">></span><span class="bl">with mark tags color</span><span class="pr"><</span><span class="gr">/a</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-warn</span><span class="bl">"</span><span class="pr">></span><span class="bl">with a warning</span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-warn fat</span><span class="bl">"</span><span class="pr">></span><span class="bl">with a fat warning</span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-alert</span><span class="bl">"</span><span class="pr">></span><span class="bl">with alert</span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-alert fat</span><span class="bl">"</span><span class="pr">></span><span class="bl">with fat alert</span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some bit of text </span><span class="pr"><</span><span class="gr">span</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">c-alert fat up</span><span class="bl">"</span><span class="pr">></span><span class="bl">with fat uppercase alert</span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span><span class="pr"><</span><span class="gr">/span</span><span class="pr">></span>
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">List styles</h2>
+				<p class="text">
+					List styles are opt-in, by default these elements do nothing.
+				</p><br />
+				<ul class="list disc">
+					<li class="text">
+						<mark class="c-done">Note</mark>: By default lists do not have a bottom marging in devkit,
+						you can easily add it with the helper classes <code>.lh-1, .lh-2, .lh-3, .lh-4, .lh-5</code> That will
+						increasingly add margins on the elements.
+					</li>
+				</ul>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display">
+					<ul class="list disc">
+						<li class="text">Some list item example (disc)</li>
+						<li class="text">Some list item example (disc)</li>
+						<ul class="list square">
+							<li class="text">Inset list item example</li>
+							<li class="text">Inset list item example</li>
+							<ul class="list circle">
+								<li class="text">Inset list item example</li>
+								<li class="text">Inset list item example</li>
+							</ul>
+						</ul>
+					</ul>
+					<ul class="list inset square">
+						<li class="text">List with default inset</li>
+						<li class="text">List with default inset</li>
+					</ul>
+					<ul class="list square lh-2">
+						<li class="text">Some list with extra margin</li>
+						<li class="text">Some list with extra margin</li>
+					</ul>
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">ul </span><span class="pr">class</span><span class="bl">="</span><span class="rd">list disc</span><span class="bl">"</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some list item example (disc)</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some list item example (disc)</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">ul </span><span class="pr">class</span><span class="bl">="</span><span class="rd">list circle</span><span class="bl">"</span><span class="pr">></span>
+			<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Inset list item example</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+			<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Inset list item example</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">/ul</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">ul </span><span class="pr">class</span><span class="bl">="</span><span class="rd">list circle</span><span class="bl">"</span><span class="pr">></span>
+			<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Inset list item example</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+			<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Inset list item example</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">/ul</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">/ul</span><span class="pr">></span>
+
+
+	<span class="pr"><</span><span class="gr">ul </span><span class="pr">class</span><span class="bl">="</span><span class="rd">list inset square</span><span class="bl">"</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">List with default inset</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">List with default inset</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">/ul</span><span class="pr">></span>
+
+	<span class="pr"><</span><span class="gr">ul </span><span class="pr">class</span><span class="bl">="</span><span class="rd">list square lh-2</span><span class="bl">"</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some list with extra margin</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+		<span class="pr"><</span><span class="gr">li </span><span class="pr">class</span><span class="bl">="</span><span class="rd">text</span><span class="bl">"</span><span class="pr">></span><span class="bl">Some list with extra margin</span><span class="pr"><</span><span class="gr">/li</span><span class="pr">></span>
+	<span class="pr"><</span><span class="gr">/ul</span><span class="pr">></span>
+
+
+</code>
+</pre>
+				</div>
+			</div>
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">List with icons</h2>
+				<p class="text">
+					If you fancy using fontAwesome you can easily make lists with icons with the class <code>.icons</code> on the UL element !
+				</p>
+			</div>
+			<div class="wrapper col-12 grid">
+				<div class="dkit-example-display col-12">
+					<ul class="list icons lh-2">
+					  <li class="text"><i class="fa fa-check c-main"></i> Hey there's an icon there !</li>
+					  <li class="text"><i class="fa fa-square c-warn"></i> This has a cool square</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">Tables</h2>
+				<p class="text">
+					Make tables that will break down into infos blocks with responsive breakpoints
+				</p>
+			</div>
+
+			<div class="wrapper col-12 grid">
+				<div class="dkit-example-display col-12">
+
+					<table class="table">
+
+					<thead>
+						<tr>
+						<th scope="col" class="text xsm fat up">Nom</th>
+						<th scope="col" class="text xsm fat up">Date de création</th>
+						<th scope="col" class="text xsm fat up">Studio</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+						<th class="text fat" scope="row">Devkit</th>
+						<td class="text" data-title="Date de création">2016</td>
+						<td class="text" data-title="Studio">Agence sudo</td>
+						</tr>
+
+						<tr>
+						<th class="text fat" scope="row">Bootscrap</th>
+						<td class="text" data-title="Date de création">2012</td>
+						<td class="text" data-title="Studio">Twitter</td>
+						</tr>
+
+						<tr>
+						<th class="text fat" scope="row">Foundation</th>
+						<td class="text" data-title="Date de création">2014</td>
+						<td class="text" data-title="Studio">Yoville</td>
+						</tr>
+
+					</tbody>
+
+					<tfoot>
+						<tr>
+						<td colspan="7" class="text sm">Sources: the amazing story of the man who created a framework because bootstrap was bad.</td>
+						</tr>
+					</tfoot>
+
+					</table>
+
+				</div>
+				<div class="dkit-example-code col-12">
+<pre>
+<code>
+	<span class="pr"><</span><span class="gr">table</span><span class="pr"> class</span><span class="bl">="</span><span class="rd">table</span><span class="bl">"</span><span class="pr">></span><span class="bl">
+     ...
+   </span><span class="pr"><</span><span class="gr">/table</span><span class="pr">></span>
+</code>
+</pre>
+				</div>
+			</div>
+
+
+			<div class="wrapper col-12 m-t">
+				<h2 class="title lg">WYSIWYG helper</h2>
+				<p class="text">
+					The WYSIWYG helper will apply all the necessary styles to all of it's children to make this region play well with content that comes from
+					a text editor (ex: the text editor from wordpress or RSS feeds).
+				</p>
+			</div>
+
+			<div class="wrapper col-12">
+				<div class="dkit-example-display wysiwyg">
+					<h1>This is some title</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<ul>
+						<li>
+							Some list element
+						</li>
+						<li>
+							Some list element
+						</li>
+						<li>
+							Some list element
+						</li>
+					</ul>
+					<ol>
+						<li>
+							test
+						</li>
+						<li>
+							test
+						</li>
+						<li>
+							test
+						</li>
+					</ol>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Tags</h2>
+					<p class="text">
+						Everything you need to know about tags
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.tag .xlg</p>
+						<a class="tag xlg">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .lg</p>
+						<a class="tag lg">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .med</p>
+						<a class="tag med">New message</a><br /><br />
+						<p class="text sm muted fat">.tag</p>
+						<a class="tag">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .sm</p>
+						<a class="tag sm">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .xsm</p>
+						<a class="tag xsm">New message</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Tag colors</h2>
+					<p class="text">
+						Tags comes in a variety of colors !
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.tag</p>
+						<a class="tag sm">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-warn</p>
+						<a class="tag sm c-warn">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-alert</p>
+						<a class="tag sm c-alert">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-done</p>
+						<a class="tag sm c-done">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-light</p>
+						<a class="tag sm c-light">New message</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Tag outlines</h2>
+					<p class="text">
+						Tags colors can also be outlined
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.tag</p>
+						<a class="tag sm outline">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-warn-outline</p>
+						<a class="tag sm c-warn-outline">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-alert-outline</p>
+						<a class="tag sm c-alert-outline">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-done-outline</p>
+						<a class="tag sm c-done-outline">New message</a><br /><br />
+						<p class="text sm muted fat">.tag .c-light-outline</p>
+						<a class="tag sm c-light-outline">New message</a><br /><br />
+					</div>
+				</div>
+
+
+				<div class="wrapper col-12 m-b m-t-lg">
+					<h1 class="title xlg">Components</h1>
+					<p class="text med muted">
+						All the devkit component helpers
+					</p>
+					<hr class="dkit-rule" />
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Links</h2>
+					<p class="text">
+						Everything you need to know about links
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.link .xlg</p>
+						<a class="link xlg">Some link</a><br /><br />
+						<p class="text sm muted fat">.link .lg</p>
+						<a class="link lg">Some link</a><br /><br />
+						<p class="text sm muted fat">.link .med</p>
+						<a class="link med">Some link</a><br /><br />
+						<p class="text sm muted fat">.link</p>
+						<a class="link">Some link</a><br /><br />
+						<p class="text sm muted fat">.link .sm</p>
+						<a class="link sm">Some link</a><br /><br />
+						<p class="text sm muted fat">.link .xsm</p>
+						<a class="link xsm">Some link</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Link modifiers</h2>
+					<p class="text">
+						Links come with a few modifiers to help you out.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.link .u</p>
+						<a class="link u">Some link with underline</a><br /><br />
+						<p class="text sm muted fat">.link .x-u</p>
+						<a class="link x-u">Some link without underline</a><br /><br />
+						<p class="text sm muted fat">.link .h-u</p>
+						<a class="link h-u">Some link with underline on hover only</a><br /><br />
+						<p class="text sm muted fat">.link .u-h-x-u</p>
+						<a class="link u-h-x-u">Some link with underline on hover only</a><br /><br />
+						<p class="text sm muted fat">.link .active</p>
+						<a class="link active">Some link with underline on hover only</a><br /><br />
+						<p class="text sm muted fat">.link .disabled</p>
+						<a class="link disabled">Some disabled link</a><br /><br />
+						<p class="text sm muted fat">.link .c-warn</p>
+						<a class="link c-warn">Some link with color !</a><br /><br />
+						<p class="text sm muted fat">.link .c-alert</p>
+						<a class="link c-alert">Some link with color !</a><br /><br />
+						<p class="text sm muted fat">.link .c-done</p>
+						<a class="link c-done">Some link with color !</a><br /><br />
+						<p class="text sm muted fat">.link .c-main</p>
+						<a class="link c-main">Some link with color !</a><br /><br />
+						<p class="text sm muted fat">.link .c-main</p>
+						<a class="link fat up">Some link with text modifers !</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Buttons</h2>
+					<p class="text">
+						Everything you need to know about buttons
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.button .xlg</p><br />
+						<a class="button xlg">Button</a><br /><br />
+						<p class="text sm muted fat">.button .lg</p><br />
+						<a class="button lg">Button</a><br /><br />
+						<p class="text sm muted fat">.button .med</p><br />
+						<a class="button med">Button</a><br /><br />
+						<p class="text sm muted fat">.button</p><br />
+						<a class="button">Button</a><br /><br />
+						<p class="text sm muted fat">.button .sm</p><br />
+						<a class="button sm">Button</a><br /><br />
+						<p class="text sm muted fat">.button .xsm</p><br />
+						<a class="button xsm">Button</a><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button modifiers</h2>
+					<p class="text">
+						Buttons comes with a few modifiers to help you out.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.button .active</p><br />
+						<a class="button c-main active">Active button</a><br /><br />
+						<p class="text sm muted fat">.button .disabled</p><br />
+						<a class="button c-main disabled">Disabled button</a><br /><br />
+						<p class="text sm muted fat">.button .c-light</p><br />
+						<a class="button c-light">Button light</a><br /><br />
+						<p class="text sm muted fat">.button .c-warn</p><br />
+						<a class="button c-warn">Button with warning</a><br /><br />
+						<p class="text sm muted fat">.button .c-alert</p><br />
+						<a class="button c-alert">Button with alert</a><br /><br />
+						<p class="text sm muted fat">.button .c-done</p><br />
+						<a class="button c-done">Button with success</a><br /><br />
+						<p class="text sm muted fat">.button .fat .up</p><br />
+						<a class="button c-main fat up">Text modifers work</a><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button outlines</h2>
+					<p class="text">
+						You can also have outlined buttons !
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.button .outline</p><br />
+						<a class="button outline">Outline default</a><br /><br />
+						<p class="text sm muted fat">.button .c-light-outline</p><br />
+						<a class="button c-light-outline">Outline light</a><br /><br />
+						<p class="text sm muted fat">.button .c-warn-outline</p><br />
+						<a class="button c-warn-outline">Outline warning</a><br /><br />
+						<p class="text sm muted fat">.button .c-alert-outline</p><br />
+						<a class="button c-alert-outline">Outline alert</a><br /><br />
+						<p class="text sm muted fat">.button .c-done-outline</p><br />
+						<a class="button c-done-outline">Outline warning</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button groups</h2>
+					<p class="text">
+						Different helpers to help you group buttons
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.button-group</p><br />
+						<div class="button-group">
+							<a class="button">Left</a>
+							<a class="button">Middle</a>
+							<a class="button">Right</a>
+						</div><br /><br />
+						<p class="text sm muted fat">.button-group (with outline buttons)</p><br />
+						<div class="button-group">
+							<a class="button outline">Left</a>
+							<a class="button outline">Middle</a>
+							<a class="button outline">Right</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button groups modifers</h2>
+					<p class="text">
+						Different helpers to help you group buttons
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.button-group</p><br />
+						<div class="button-group">
+							<a class="button">Left</a>
+							<a class="button active">Middle</a>
+							<a class="button">Right</a>
+						</div><br /><br />
+						<p class="text sm muted fat">.button-group (with outline active buttons)</p><br />
+						<div class="button-group">
+							<a class="button outline">Left</a>
+							<a class="button outline active">Middle</a>
+							<a class="button outline">Right</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button perfect sizes</h2>
+					<p class="text">
+						It can be annoying sometimes with icons that will not necessarily be
+						centered in the buttons, you can use theses helper classes.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.perfect-xsm</p><br />
+						<a class="button c-main xsm perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main xsm">Same as me</a><br /><br />
+						<p class="text sm muted fat">.perfect-sm</p><br />
+						<a class="button c-main sm perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main sm">Same as me</a><br /><br />
+						<p class="text sm muted fat">.perfect</p><br />
+						<a class="button c-main perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main">Same as me</a><br /><br />
+						<p class="text sm muted fat">.perfect-med</p><br />
+						<a class="button c-main med perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main med">Same as me</a><br /><br />
+						<p class="text sm muted fat">.perfect-lg</p><br />
+						<a class="button c-main lg perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main lg">Same as me</a><br /><br />
+						<p class="text sm muted fat">.perfect-lg</p><br />
+						<a class="button c-main xlg perfect"><i class="fas fa-heart"></i></a>
+						<a class="button c-main xlg">Same as me</a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Button shapes</h2>
+					<p class="text">
+						A few helpers to help you with button shapes
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.round</p><br />
+						<a class="button c-main perfect round delay-appear"><i class="fas fa-heart"></i></a><br /><br />
+						<p class="text sm muted fat">.square</p><br />
+						<a class="button c-main perfect square"><i class="fas fa-heart"></i></a><br /><br />
+						<p class="text sm muted fat">.block</p><br />
+						<a class="button c-main perfect block"><i class="fas fa-heart"></i></a><br /><br />
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Dropdowns</h2>
+					<p class="text">
+						Make anything a dropdown ! Any icon put inside the button will be considered as a toggle glyph and will
+						be flipped up or down depending on the dropdown state, it's black magic.
+					</p><br />
+					<p class="text fat">Script dependencies:</p>
+					<ul class="list disc">
+						<li class="text">
+							<mark class="c-warn">Required</mark> @jquery.js
+						</li>
+						<li class="text">
+							<mark class="c-warn">Required</mark> dkit-dropdown.js
+						</li>
+						<li class="text">
+							<mark class="c-warn">Required</mark> goat blood
+						</li>
+					</ul>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.dropdown > .dropdown-menu</p><br />
+						<div class="dropdown">
+							<a class="button" data-dropdown>This is a dropdown <i class="fas fa-heart"></i></a>
+							<div class="dropdown-menu">
+								<a class="link c-text sm">Some dropdown stuff</a>
+								<a class="link c-text sm">Some other dropdown choice</a>
+								<a class="link c-text sm">How about this amazing choice</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Dropdowns alignements</h2>
+					<p class="text">
+						Dropdowns can be aligned to the left, the right, on the bottom
+						or the top of the elements
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.dropdown > .dropdown-menu .right</p><br />
+						<div class="dropdown">
+							<a class="button" data-dropdown>This is a dropdown <span class="fas fa-angle-down"></span></a>
+							<div class="dropdown-menu right">
+								<a class="link c-text sm">Some dropdown stuff</a>
+								<a class="link c-text sm">Some other dropdown choice</a>
+								<a class="link c-text sm">How about this amazing choice</a>
+							</div>
+						</div><br /><br />
+						<p class="text sm muted fat">.dropdown > .dropdown-menu .right .top</p><br />
+						<div class="dropdown">
+							<div class="dropdown-menu right top">
+								<a class="link c-text sm">Some dropdown stuff</a>
+								<a class="link c-text sm">Some other dropdown choice</a>
+								<a class="link c-text sm">How about this amazing choice</a>
+							</div>
+							<a class="button" data-dropdown>This is a dropdown <span class="fas fa-angle-up"></span></a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Dropdown with self setting</h2>
+					<p class="text">
+						You can append the text of the menu selection directly inside the dropdown,
+						the script will take care of rotating and keeping your icon of choice too !
+						simply use the data-dropdown by providing the "self" option <code>data&#8209;dropdown="self"</code>
+					</p><br />
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display">
+						<p class="text sm muted fat">.dropdown > [data-dropdown="self"]</p><br />
+						<div class="dropdown">
+							<a class="button" data-dropdown="self">Choice 1 <span class="fas fa-angle-down"></span></a>
+							<div class="dropdown-menu">
+								<a class="link c-text sm active">Choice 1</a>
+								<a class="link c-text sm">Choice 2</a>
+								<a class="link c-text sm">Choice 3</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Forms</h2>
+					<p class="text">
+						Anything wrapped inside a <code>.form</code> class will recieve the
+						devkit default form styles.
+					</p><br />
+					<ul class="list disc">
+						<li class="text">
+							<mark class="c-alert">Cross-browser</mark> The default form elements below will look mostly the same in all browsers, sometimes the vertical alignement might differ for checkboxes, if you wish to have <i>always perfect</i> form elements, you can check the <code>.fix-*</code> form elements !
+						</li>
+					</ul>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form grid">
+						<div class="col-12 form-group">
+							<label class="fat">Full name</label>
+							<input class="col-12" type="text" placeholder="ex: Marty Mc. Fly"/>
+						</div>
+						<div class="col-12 form-group">
+							<label class="fat">Email</label>
+							<input class="col-12" type="text" placeholder="Enter your email address"/>
+							<small>This is some field information</small>
+						</div>
+						<div class="col-12 form-group">
+							<label class="fat">Suscribe to newsletter ?</label><br />
+							<input type="checkbox" id="check">
+    					<label for="check">Oh yes please !</label>
+						</div>
+						<div class="col-12 form-group">
+							<label class="fat">Bulging pectorals ?</label><br />
+							<input type="radio" name="bulging" id="radio" value="1">
+    					<label for="radio">Yes</label><br />
+							<input type="radio" name="bulging" id="radio2" value="2">
+    					<label for="radio2">No</label>
+						</div>
+						<div class="col-12 form-group">
+							<label class="fat">What do you want from us ?</label>
+							<textarea class="col-12" placeholder="Tell us !"></textarea>
+						</div>
+						<div class="col-6 form-group">
+							<label class="fat">This is a default select box</label>
+							<select class="col-12" name="something">
+								<option>Choose one ...</option>
+							</select>
+						</div>
+						<div class="col-12 form-group">
+							<button class="button">Submit</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Input sizes</h2>
+					<p class="text">
+						All the regular devkit sizes also work with form input.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form grid">
+						<p class="text sm muted fat">.xlg</p>
+						<div class="col-12 form-group">
+							<input class="xlg" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.lg</p>
+						<div class="col-12 form-group">
+							<input class="lg" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.med</p>
+						<div class="col-12 form-group">
+							<input class="med" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">default</p>
+						<div class="col-12 form-group">
+							<input type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.sm</p>
+						<div class="col-12 form-group">
+							<input class="sm" class="" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.xsm</p>
+						<div class="col-12 form-group">
+							<input class="xsm" type="text" placeholder="Some input"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Input colors</h2>
+					<p class="text">
+						All the regular devkit colors also work with form inputs.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form grid">
+						<p class="text sm muted fat">.c-main</p>
+						<div class="col-12 form-group">
+							<input class="c-main" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.c-warn</p>
+						<div class="col-12 form-group">
+							<input class="c-warn" type="text" placeholder="Some input"/>
+							<small class="c-warn">Small color works too !</small>
+						</div>
+						<p class="text sm muted fat">.c-alert</p>
+						<div class="col-12 form-group">
+							<input class="c-alert" type="text" placeholder="Some input"/>
+						</div>
+						<p class="text sm muted fat">.c-done</p>
+						<div class="col-12 form-group">
+							<input class="c-done" type="text" placeholder="Some input"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Form grid</h2>
+					<p class="text">
+						You can use all the grid layouts class to help you build more complex
+						forms. You can also use <code>.form-col</code> helper to automatically
+						give equal spacing between all your form elements. If you wish to have
+						equal spacing vertically as well you can wrap your feilds inside a
+						<code>.form-group</code> element. By default Devkit does not provide
+						media queries for simplifying forms for mobile. One quick trip is to simply
+						set all the .form-col to 100% on mobile, then all the fields will be one
+						below the others.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<div class="form-group col-12 grid">
+							<div class="form-col col-6">
+								<label class="fat">First name</label>
+								<input class="col-12" type="text" placeholder="Enter first name"/>
+							</div>
+							<div class="form-col col-6">
+								<label class="fat">Last name</label>
+								<input class="col-12" type="text" placeholder="Enter last name"/>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<label class="fat">Email</label>
+								<input class="col-12" type="email" placeholder="Enter your email address"/>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<label class="fat">Message</label>
+								<textarea class="col-12" placeholder="Enter message"></textarea>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<button class="button">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Form grid utilities</h2>
+					<p class="text">
+						Here is some common UI paterns fix that you will find handy.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<p class="text">
+						To line up vertically labels againts inputs you can use the <code>.form-inline-label</code>
+						helper to get the job done. Simply use it on a <code>.form-col</code> element.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<div class="form-group col-12 grid">
+							<div class="form-col form-inline-label col-3">
+								<label class="fat">Left arm lenght</label>
+							</div>
+							<div class="form-col col-9">
+								<input type="text" placeholder="Enter arm lenght"/>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col form-inline-label col-3">
+								<label class="fat">Right arm lenght</label>
+							</div>
+							<div class="form-col col-9">
+								<input type="text" placeholder="Enter arm lenght"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12">
+					<p class="text">
+						To line up two fields in different colums and one does not have a
+						label use <code>.form-empty-label</code> on an empty <code>label</code>
+						element. If you want the two elements to merge on top of eachoter on mobile
+						simply target this element and add a <code>display: none</code>.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<div class="form-group col-12 grid">
+							<div class="form-col col-6">
+								<label class="fat">Arms lenghts</label>
+								<input class="col-12" type="text" placeholder="Enter left arm lenght"/>
+							</div>
+							<div class="form-col col-6">
+								<label class="form-empty-label"></label>
+								<input class="col-12" type="text" placeholder="Enter right arm lenght"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12">
+					<p class="text">
+						To group form inputs together you can use the <code>.form-input-group</code>
+						helper class. Basically anything that has borders can be merged into
+						groups.
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<label class="fat">Arms lenghts</label>
+								<div class="form-input-group grid col-12">
+									<input class="col-6" type="text" placeholder="Enter left arm lenght"/>
+									<input class="col-6" type="text" placeholder="Enter left arm lenght"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<label class="fat">Works with buttons too !</label>
+								<div class="form-input-group grid col-12">
+									<input class="col-6" type="text" placeholder="Enter left arm lenght"/>
+									<button class="button col-6">Submit arm</button>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-12 grid">
+							<div class="form-col col-12">
+								<label class="fat">And multiple fields, gad dayum !</label>
+								<div class="form-input-group grid col-12">
+									<input class="col-4" type="text" placeholder="Enter left arm lenght"/>
+									<input class="col-4" type="text" placeholder="Enter left arm lenght"/>
+									<button class="button col-4">Submit arm</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Iconed inputs</h2>
+					<p class="text">
+						One day you may feel the need to do some extra work and add icons
+						to your input fields... Fear not, we did all the work for you,
+						simply put a span around your icon, then put a wrapper that contains
+						the input and the span with the <code>.form-icon-input</code> class.
+						you can also add the <code>.left</code> or <code>.right</code> modifier
+						to align your icon to your liking, it will smartly position it were
+						it needs to be !
+					</p>
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<div class="form-group col-12">
+							<div class="form-icon-input left">
+								<input class="col-12" type="text" placeholder="Woo shiny icons"/>
+								<span class="size-reg c-main"><i class="fas fa-heart"></i></span>
+							</div>
+						</div>
+						<div class="form-group col-12">
+							<div class="form-icon-input right">
+								<input class="col-12" type="text" placeholder="Woo shiny icons"/>
+								<span class="size-reg c-main"><i class="fas fa-heart"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper col-12 m-t">
+					<h2 class="title lg">Form perfect checkboxes</h2>
+					<p class="text">
+						Pesky browsers are not all the same, and sometimes your deligthfully coded
+						form will look like smelly porridge. To prevent this, you can use these <mark class="c-alert">hacky</mark>
+						methods to have the same inputs on mostly any browsers.
+					</p>
+					<br />
+
+					<ul class="list disc">
+						<li class="text">
+							<mark class="c-warn">required</mark> dkit-checkbox.js
+						</li>
+						<li class="text">
+							<mark class="c-alert">important</mark> We reccomend that you only set the checked status using the <code>.checked</code> class on the <code>.fix-checkbox</code> element,
+							the script will take care of automatically setting the invisible input to the correct state on page load. If you need to add this field asyncronously, you can render the
+							element with the correct class and the correct "checked" attribute on the input yourself.
+						</li>
+						<li class="text">
+								To make it work simply use the <code>[data-checkbox-name]</code> attribute on the <code>.fix-checkbox</code> element. Make sure that the <code>.fix-checkbox-group</code> element contains a checkbox or a radio input.
+						</li>
+						<li class="text">
+								Using the class <code>.radio</code> on the <code>.fix-checkbox</code> element with change the display
+								and the behavior of the checkbox to match a regular checkbox.
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="wrapper col-12">
+					<div class="dkit-example-display form">
+						<p class="text sm muted fat">.fix-checkbox-group > fix-checkbox.radio</p><br />
+						<div class="fix-checkbox-group">
+							<div class="fix-checkbox checked radio" data-checkbox-name="superRadio"><i class="fas fa-circle"></i></div>
+							<label>Lorem ipsum dolor sit amet</label>
+							<input type="radio" value="sometin1" name="superRadio"/>
+						</div>
+						<div class="fix-checkbox-group">
+							<div class="fix-checkbox radio" data-checkbox-name="superRadio"><i class="fas fa-circle"></i></div>
+							<label>Lorem ipsum dolor sit amet</label>
+							<input type="radio" value="sometin2" name="superRadio" />
+						</div>
+						<p>
+							<br /><br />
+						</p>
+						<p class="text sm muted fat">.fix-checkbox-group > fix-checkbox</p><br />
+						<div class="fix-checkbox-group">
+							<div class="fix-checkbox" data-checkbox-name="superCheck"><i class="fas fa-check"></i></div>
+							<label>Lorem ipsum dolor sit amet</label>
+							<input type="checkbox" name="superCheck"/>
+						</div>
+						<p>
+							<br /><br />
+						</p>
+						<p class="text sm muted fat">.fix-checkbox-group > fix-checkbox</p><br />
+						<div class="fix-checkbox-group">
+							<div class="fix-checkbox" data-checkbox-name="superCheck2"><i class="fas fa-check"></i></div>
+							<label class="xsm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+							<input type="checkbox" name="superCheck2"/>
+						</div>
+						<p>
+							<br /><br />
+						</p>
+						<p class="text sm muted fat">.fix-checkbox-group.top > fix-checkbox</p><br />
+						<div class="fix-checkbox-group top">
+							<div class="fix-checkbox" data-checkbox-name="superCheck3"><i class="fas fa-check"></i></div>
+							<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</label>
+							<input type="checkbox" name="superCheck3"/>
+						</div>
+					</div>
+				</div>
+
+	</div>
+
+</body>
+
+<script src="dist/bundle.js"></script>
+
+</html>

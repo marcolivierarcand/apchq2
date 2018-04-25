@@ -1,0 +1,209 @@
+.social-list a{
+	margin-right: $spacing-xxsm;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+
+.Feature-image-wrap{
+	background-size: cover;
+	background-position: center;
+	min-width: 100%;
+	height: 100%;
+	@include respond-to($brk-med) {
+		height: 300px;
+	}
+}
+
+
+.Feature-content{
+	padding: 100px;
+	@include respond-to($brk-med) {
+	padding: 35px;
+	}
+}
+
+.Feature{
+	border-bottom: 1px solid $color-border;
+}
+
+.Card img{
+	width: 100%;
+	display: block;
+}
+
+.Gallery-item img{
+	width: 100%;
+
+}
+
+.Header{
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: $color-light;
+
+}
+
+.header-wrapper{
+	max-width: 910px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.container{
+	padding-left: 20px;
+	padding-right: 20px;
+	border-bottom: 1px solid $color-border;
+	&.no-border-bottom{
+		border-bottom: none;
+	}
+}
+
+.wrapper{
+	max-width: 910px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	&.inset-height{
+		padding-top:100px;
+		padding-bottom: 100px;
+		@include respond-to($brk-sm) {
+			padding-top:50px;
+			padding-bottom: 50px;
+		}
+	}
+	&.inset-top{
+		padding-top:100px;
+		@include respond-to($brk-sm) {
+			padding-top:50px;
+		}
+	}
+	&.inset-bottom{
+		padding-bottom: 100px;
+		@include respond-to($brk-sm) {
+			padding-bottom:50px;
+		}
+	}
+
+}
+
+.logo{
+	max-width: 150px !important;
+}
+
+.project-card, .contact-card, .client-card{
+	padding: 0;
+	.p-xsm{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.m-b-xsm{
+		margin-bottom: 14px;
+	}
+/* Exception to LG screen pour section client */
+	@media screen and (min-width: $brk-med) {
+	  .col--lg-25 {
+	    width: 20%;
+	  }
+	}
+}
+
+.italic{
+	font-style: italic;
+}
+
+#map{
+	width:100%;
+	height:400px;
+}
+
+.flex-reverse{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+// Contact form 7
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+	border: 2px solid #d25e5e !important;
+	background-color: #b87d7d;
+	color: #fff;
+	// padding: 1rem;
+
+}
+div.wpcf7-response-output{
+	padding: $spacing-xsm !important;
+	margin:0 !important;
+	font-size: 1.15rem !important;
+	line-height: $size-xsm-lh;
+}
+
+span.wpcf7-not-valid-tip{
+	margin-top: 1rem;
+	font-size: 1.15rem !important;
+}
+
+.ajax-loader{
+	display: none !important;
+}
+
+// Google Map:
+.box-info{
+	max-width: 300px;
+	.info p{
+		line-height: 1.8rem;
+	}
+}
+
+// Video player
+.video-header{
+	// padding: 5vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-align{
+	width: 800px;
+	height: 475px;
+	// padding-top: 20vh;
+	// position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.stop{
+	overflow: hidden;
+}
+.video_close{
+	position: absolute;
+	top: 0;
+	right: 0
+}
+
+// Pour ne pas permettre l'outil Personnaliser
+#wp-admin-bar-customize{
+	display: none !important;
+}

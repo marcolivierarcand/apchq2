@@ -1,0 +1,137 @@
+// Text colors
+.c-main {
+	color: $color-main
+}
+.c-main_l {
+	color: $color-main_light
+}
+.c-main_h {
+	color: $color-main_hover
+}
+.c-text {
+	color: $color-text
+}
+.c-text_h {
+	color: $color-text_hover
+}
+.c-text_l {
+	color: $color-text_light
+}
+.c-warn {
+	color: $color-warn
+}
+.c-alert {
+	color: $color-alert
+ }
+.c-done	{
+	color: $color-done
+}
+
+// Background colors
+.bg-main {
+	background-color: $color-main
+}
+.bg-main_l {
+	background-color: $color-main_light
+}
+.bg_main_h {
+	background-color: $color-main_hover
+}
+.bg-text {
+	background-color: $color-text
+}
+.bg-text_h{
+	background-color: $color-text_hover
+}
+.bg-text_l {
+	background-color: $color-text_light
+}
+.bg-light {
+	background-color: $color-light
+}
+.bg-dark {
+	background-color: $color-dark
+}
+.bg-warn {
+	background-color: $color-warn
+}
+.bg-alert {
+	background-color: $color-alert
+}
+.bg-done {
+	background-color: $color-done
+}
+.bg-white	{
+	background-color: white
+}
+
+// Helper to display fonts as disabled or less important
+.muted {
+	opacity: 0.5;
+
+	&.hover:hover{
+		opacity: 1;
+	}
+}
+
+// Usefull to force some elements to inherit color from these classes
+
+@mixin text-colors{
+
+	.c-main {
+		color: $color-main
+	}
+	.c-main_l {
+		color: $color-main_light
+	}
+	.c-main_h {
+		color: $color-main_hover
+	}
+	.c-text {
+		color: $color-text
+	}
+	.c-text_h {
+		color: $color-text_hover
+	}
+	.c-text_l {
+		color: $color-text_light
+	}
+	.c-warn {
+		color: $color-warn
+	}
+	.c-alert {
+		color: $color-alert
+	 }
+	.c-done	{
+		color: $color-done
+	}
+
+	&.c-main {
+		color: $color-main
+	}
+	&.c-main_l {
+		color: $color-main_light
+	}
+	&.c-main_h {
+		color: $color-main_hover
+	}
+	&.c-text {
+		color: $color-text
+	}
+	&.c-text_h {
+		color: $color-text_hover
+	}
+	&.c-text_l {
+		color: $color-text_light
+	}
+	&.c-warn {
+		color: $color-warn
+	}
+	&.c-alert {
+		color: $color-alert
+	 }
+	&.c-done	{
+		color: $color-done
+	}
+
+}

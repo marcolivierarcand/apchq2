@@ -1,0 +1,183 @@
+// GRID CONFIGURATION ------------------------- //
+
+	// Website max width and num of column
+	$grid-max-width: 1200;
+	$grid-columns: 12;
+
+	// Breakpoints
+	$brk-xlg: 1200px;
+	$brk-lg: 1000px;
+	$brk-med: 800px;
+	$brk-sm: 550px;
+	$brk-xsm: 400px;
+
+
+// SPACING && PADDINGS ------------------------- //
+
+	// Website margin and padding increments
+	$spacing-xxlg: 10em;
+	$spacing-xlg: 8em;
+	$spacing-lg: 6em;
+	$spacing-med: 4em;
+	$spacing-reg: 3em;
+	$spacing-sm: 2em;
+	$spacing-xsm: 0.8em;
+	$spacing-xxsm: 0.5em;
+	$spacing-micro: 0.2em;
+
+	// Space on the left side of a list element
+	$spacing-list-increment: 2.3em;
+
+	// Padding inside container elements
+	$spacing-container-gutters: 40px;
+
+	// Padding inside wrapper elements
+	$spacing-wrapper-gutters: 15px;
+
+	// Form fieldset gutters
+	$spacing-form-col-gutters: 1.25rem;
+	$spacing-form-group-vertical: 2.5rem;
+
+	// Buttons inside padding
+	$spacing-button-xlg: .75rem 2rem;
+	$spacing-button-lg: .75rem 1.75rem;
+	$spacing-button-med: .75rem 1.5rem;
+	$spacing-button-reg: .75rem 1.25rem;
+	$spacing-button-sm: 1rem 2rem;
+	$spacing-button-xsm: .75rem 1rem;
+
+	// Input inside padding
+	$spacing-input-xlg: .75rem 2rem;
+	$spacing-input-lg: .75rem 1.75rem;
+	$spacing-input-med: .75rem 1.5rem;
+	$spacing-input-reg: .75rem 1.25rem;
+	$spacing-input-sm: .75rem 1.125rem;
+	$spacing-input-xsm: .75rem 1rem;
+
+	// Tags inside padding
+	$spacing-tags-xlg: 1.75rem 2rem;
+	$spacing-tags-lg: 1.3rem 1.5rem;
+	$spacing-tags-med: .9rem 1.1rem;
+	$spacing-tags-reg: .7rem .9rem;
+	$spacing-tags-sm: .5rem .7rem;
+	$spacing-tags-xsm: .3rem .4rem;
+
+	// Perfect button sizes:
+	// you may need to play with this depending on font family and line-height
+	// to make the perfect button follow the normal button heights
+	$spacing-button-perfect-xlg: 57px;
+	$spacing-button-perfect-lg: 49px;
+	$spacing-button-perfect-med: 41px;
+	$spacing-button-perfect-reg: 39px;
+	$spacing-button-perfect-sm: 34px;
+	$spacing-button-perfect-xsm: 30px;
+
+
+// ELEMENT STYLES ------------------------- //
+
+	$element-input-radius: 0;
+	$element-input-border-width: 1px;
+	$element-input-inset-shadow: inset 0 1px 0 0 rgba(63,63,68,0.05);
+
+
+// FONTS SIZES AND LINE-HEIGHTS ------------------------- //
+
+	// Display font sizes
+	$size-display-lg: 4.8rem;
+	$size-display-lg-lh: 6.0rem;
+	$size-display-reg: 4.2rem;
+	$size-display-reg-lh: 5.3rem;
+	$size-display-sm: 3.8rem;
+	$size-display-sm-lh: 4.8rem;
+
+	// h1 to h6 font sizes
+	$size-xlg: 3.2rem;
+	$size-xlg-lh: 4rem;
+	$size-lg: 2.4rem;
+	$size-lg-lh: 3.2rem;
+	$size-med: 1.8rem;
+	$size-med-lh: 2.4rem;
+	$size-reg: 1.6rem;
+	$size-reg-lh: 3rem;
+	$size-sm: 1.4rem;
+	$size-sm-lh: 2rem;
+	$size-xsm: 1.3rem;
+	$size-xsm-lh: 2rem;
+
+
+// COLOR CONFIGURATION ------------------------- //
+
+	// Accent colors
+	$color-main: 							black;
+	$color-main_light: 				#666666;
+	$color-main_hover: 				#575757;
+
+	// Text colors
+	$color-text: 							black;
+	$color-text_hover:				black;
+	$color-text_light:				#ffffff;
+
+	// Background colors
+	$color-light: 						#f0f0f0;
+	$color-light_hover: 			#dddddd;
+	$color-dark:							#1b1b1b;
+
+	// Color for borders
+	$color-border: 						#e0e0e0;
+	$color-border_hover: 			#bdbdbd;
+
+	// State colors
+	$color-warn:							#F44336;
+	$color-warn_hover:				#D32F2F;
+	$color-alert:							#FF9800;
+	$color-alert_hover:				#F57C00;
+	$color-done:							#4CAF50;
+	$color-done_hover:				#388E3C;
+
+
+
+// FONT CONFIGURATION ------------------------- //
+
+	// This is an example how you should include google fonts
+	// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+	$verticalAlign: 1; // <~ Forces some font to look centered in height in equal padding blocks.
+
+	%font-reg{
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,sans-serif;
+		font-weight: 400 !important;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		// -moz-osx-font-smoothing: grayscale;
+	}
+
+	%font-bold{
+		font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,sans-serif;
+		font-weight: 600 !important;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		// -moz-osx-font-smoothing: grayscale;
+	}
+
+
+// MODULES ------------------------------------ //
+
+	@import "./dkit-mixins";
+	@import "./dkit-reset";
+	@import "./dkit-colors";
+	@import "./dkit-grid";
+	@import "./dkit-buttons";
+	@import "./dkit-dropdown";
+	@import "./dkit-links";
+	@import "./dkit-flash";
+	@import "./dkit-tags";
+	@import "./dkit-text";
+	@import "./dkit-helpers";
+	@import "./dkit-forms";
+	@import "./dkit-tables";
+	@import "./dkit-lightbox";
+	@import "./dkit-examples";
+	@import "./dkit-flex";
+	@import "./dkit-code";
+	@import "./dkit-sizes";
+	@import "./dkit-responsive";

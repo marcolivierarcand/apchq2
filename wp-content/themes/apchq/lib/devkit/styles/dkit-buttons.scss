@@ -1,0 +1,260 @@
+/**
+	Contains styles for:
+	* .button
+	* .button-group
+*/
+.button {
+	font-size: $size-reg;
+	line-height: $size-reg-lh;
+	padding: $spacing-button-reg;
+	color: white;
+	background-color: $color-main;
+	border: $color-main $element-input-border-width solid;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: $element-input-radius;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	@extend %font-reg;
+	svg{
+		margin-right: $spacing-xsm;
+	}
+	&:hover, &.active {
+		background-color: $color-main_hover;
+		border-color: $color-main_hover;
+	}
+	&.disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+	&.perfect {
+		text-align: center;
+		width: $spacing-button-perfect-reg;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	// Font-styles
+	&.up {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&.fat {
+		@extend %font-bold;
+	}
+	&.thin {
+		@extend %font-reg;
+	}
+
+	// Sizes
+	&.fill-w {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.xlg {
+		padding: $spacing-button-xlg;
+		font-size: $size-xlg;
+		line-height: $size-xlg-lh;
+		&.perfect {
+			text-align: center;
+			width: $spacing-button-perfect-xlg;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	&.lg {
+		padding: $spacing-button-lg;
+		font-size: $size-lg;
+		line-height: $size-lg-lh;
+		&.perfect {
+			text-align: center;
+			width: $spacing-button-perfect-lg;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	&.med {
+		padding: $spacing-button-med;
+		font-size: $size-med;
+		line-height: $size-med-lh;
+		&.perfect {
+			text-align: center;
+			width: $spacing-button-perfect-med;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	&.sm {
+		padding: $spacing-button-sm;
+		font-size: $size-sm;
+		line-height: $size-sm-lh;
+		&.perfect {
+			text-align: center;
+			width: $spacing-button-perfect-sm;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	&.xsm {
+		padding: $spacing-button-xsm;
+		font-size: $size-xsm;
+		line-height: $size-xsm-lh;
+		&.perfect {
+			text-align: center;
+			width: $spacing-button-perfect-xsm;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+
+	// Colors
+	&.outline {
+		background-color: transparent;
+		border: $color-main 1px solid;
+		color: $color-main;
+		&:hover {
+			color: $color-main_hover;
+			border-color: $color-main_hover;
+		}
+		&.active {
+			background-color: $color-main;
+			border-color: $color-main;
+			color: white;
+		}
+	}
+	&.c-main {
+		background-color: $color-main;
+		border-color: $color-main;
+		color: white;
+		&:hover, &.active {
+			background-color: $color-main_hover;
+			border-color: $color-main_hover;
+		}
+	}
+	&.c-main-outline {
+		background-color: transparent;
+		border-color: $color-main;
+		color: $color-main;
+		&:hover, &.active {
+			color: $color-main_hover;
+			border-color: $color-main_hover;
+		}
+	}
+	&.c-light {
+		background-color: $color-light;
+		border-color: $color-light;
+		color: $color-text;
+		&:hover, &.active {
+			background-color: $color-light_hover;
+			color: $color-text_hover;
+			border-color: $color-light_hover;
+		}
+	}
+	&.c-light-outline {
+		background-color: transparent;
+		border-color: $color-light;
+		color: $color-text;
+		&:hover, &.active {
+			color: $color-text_hover;
+			border-color: $color-light_hover;
+		}
+	}
+	&.c-done {
+		background-color: $color-done;
+		border-color: $color-done;
+		color: white;
+		&:hover, &.active {
+			background-color: $color-done_hover;
+			border-color: $color-done_hover;
+		}
+	}
+	&.c-done-outline {
+		background-color: transparent;
+		border-color: $color-done;
+		color: $color-done;
+		&:hover, &.active {
+			color: $color-done_hover;
+			border-color: $color-done_hover;
+		}
+	}
+	&.c-warn {
+		background-color: $color-warn;
+		border-color: $color-warn;
+		color: white;
+		&:hover, &.active {
+			background-color: $color-warn_hover;
+			border-color: $color-warn_hover;
+		}
+	}
+	&.c-warn-outline {
+		background-color: transparent;
+		border-color: $color-warn;
+		color: $color-warn;
+		&:hover, &.active {
+			color: $color-warn_hover;
+			border-color: $color-warn_hover;
+		}
+	}
+	&.c-alert {
+		background-color: $color-alert;
+		border-color: $color-alert;
+		color: white;
+		&:hover, &.active {
+			background-color: $color-alert_hover;
+			border-color: $color-alert_hover;
+		}
+	}
+	&.c-alert-outline {
+		background-color: transparent;
+		border-color: $color-alert;
+		color: $color-alert;
+		&:hover, &.active {
+			color: $color-alert_hover;
+			border-color: $color-alert_hover;
+		}
+	}
+
+	// Shapes
+	&.block {
+		display: block;
+		width: 100%;
+	}
+	&.square {
+		border-radius: 0px;
+	}
+	&.round {
+		border-radius: 100%;
+	}
+	&.larger {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+.button-group {
+	font-size: 0;
+	display: inline-block;
+	.button {
+		border-radius: 0;
+		border-left-width: 0;
+		border-right-width: 0;
+	}
+	.button:first-child {
+		border-radius: $element-input-radius 0 0 $element-input-radius;
+		border-left-width: $element-input-border-width;
+	}
+	.button:last-child {
+		border-radius: 0 $element-input-radius $element-input-radius 0;
+		border-right-width: $element-input-border-width;
+	}
+	[class$="outline"].active, [class$="outline"]:hover {
+		background-color: $color-light;
+	}
+}

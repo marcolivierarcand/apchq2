@@ -1,0 +1,51 @@
+/**
+	Contains styles for:
+	* .dropdown
+	* .dropdown-menu
+  * .dropdown-open
+*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  border: 1px solid $color-border;
+  padding: .5rem 0;
+  background-color: white;
+  z-index: 1000;
+  min-width: 300px;
+  a {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
+  a:hover, a.active {
+    background-color: $color-light;
+  }
+
+  // Alignements
+  &.right {
+    right: 0;
+  }
+  &.top {
+    bottom: 39px;
+  }
+}
+
+[data-dropdown] > svg {
+	margin-left: 5px;
+}
+
+// Helper class to rotate any toggle icon
+.dropdown-open > span, .dropdown-open > svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}

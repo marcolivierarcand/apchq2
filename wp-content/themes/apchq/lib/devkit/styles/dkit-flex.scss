@@ -1,0 +1,127 @@
+// Basic grid styles
+// .container {
+//   padding-left: $spacing-container-gutters;
+//   padding-right: $spacing-container-gutters;
+//   max-width: $grid-max-width;
+// }
+//
+// .wrapper {
+//   padding: $spacing-wrapper-gutters
+// }
+
+.clear{
+	align-self: flex-start;
+}
+
+.grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	width: 100%;
+}
+
+.unflex{
+	display: block;
+}
+
+.align{
+	display: flex;
+	&-c{
+		align-items: center;
+	}
+	&-t{
+		align-items: flex-start;
+	}
+  &-b{
+		align-items: flex-end;
+	}
+}
+
+.justify{
+	display: flex;
+  &-c{
+    justify-content: center;
+	}
+	&-l{
+		justify-content: flex-start;
+	}
+	&-r{
+		justify-content: flex-end;
+	}
+}
+
+.fill{
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	&-h{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	&-w{
+		width: 100%;
+	}
+}
+
+.vert{
+	&-t{
+		display: -webkit-box; 	display: -ms-flexbox; 	display: flex;
+		-webkit-box-pack: top;
+		-ms-flex-pack: top;
+		justify-content: top;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	&-c{
+		display: -webkit-box; 	display: -ms-flexbox; 	display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	&-b{
+		display: -webkit-box; 	display: -ms-flexbox; 	display: flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+
+.horz{
+	&-l{
+		margin-left: 0;
+	}
+	&-r{
+		margin-right: 0;
+	}
+	&-c{
+		margin: 0 auto;
+	}
+}
+
+.col {
+  -webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+@for $i from 1 through $grid-columns {
+	.col-#{$i} {
+		width: 100% / $grid-columns * $i;
+	}
+}

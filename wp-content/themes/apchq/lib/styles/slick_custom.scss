@@ -1,0 +1,53 @@
+
+.testimony{
+	position: relative;
+}
+
+.prev, .next{
+	svg{ cursor: pointer; }
+	position: absolute;
+	bottom: 50%;
+	@include respond-to(1050px) {
+		bottom: 15px;
+	}
+}
+
+.prev{
+	left: 20vw;
+	@include respond-to(1600px) {
+		left: 10vw;
+	}
+	@include respond-to(1400px) {
+		left: 5vw;
+	}
+	@include respond-to(1250px) {
+		left: 35px;
+	}
+	font-size: 3rem;
+	&:before{
+		cursor: pointer;
+		display: none;
+		font-family: "Font Awesome 5 Solid";
+		content: "\f0a8";
+	}
+}
+
+
+.next{
+	right: 20vw;
+	@include respond-to(1600px) {
+		right: 10vw;
+	}
+	@include respond-to(1400px) {
+		right: 5vw;
+	}
+	@include respond-to(1250px) {
+		right: 35px;
+	}
+	font-size: 3rem;
+	&:before{
+		display: none;
+		font-family: "Font Awesome 5 Solid";
+		content: "\f0a9";
+	}
+}

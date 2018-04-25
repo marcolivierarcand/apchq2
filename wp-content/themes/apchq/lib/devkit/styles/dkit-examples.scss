@@ -1,0 +1,69 @@
+.dkit-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 60px;
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid $color-border;
+  // background-color: $color-light;
+}
+
+.dkit-main {
+  padding-left: 300px;
+}
+
+.dkit-example-display {
+  border: 1px solid $color-border;
+  padding: 20px;
+}
+
+.dkit-example-code {
+  position: relative;
+  overflow-x: scroll;
+  padding: 10px 0px;
+  background-color: $color-light;
+}
+
+.dkit-code {
+  [class*="language"] {
+    margin: 0px;
+  }
+}
+
+.dkit-rule {
+	border: none;
+	border-top: 1px solid $color-border;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.dkitfake-parent{
+  background-color: $color-light;
+  padding: 20px;
+  position: relative;
+}
+
+.dkitfake-body{
+  padding-left: 320px;
+}
+
+.dkitfake-sidebar{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 300px;
+}
+
+.dkitfake-section{
+  padding: 20px;
+  background-color: white;
+}
+
+.dkit-example-bg {
+  background-color: #c8bee2;
+}
+
+.dkit-example-block {
+  background-color: $color-main;
+}

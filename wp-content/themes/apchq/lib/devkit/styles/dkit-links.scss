@@ -1,0 +1,103 @@
+/*
+	Contains styles for
+	.link
+*/
+.link {
+	font-size: $size-reg;
+	line-height: $size-reg-lh;
+	color: $color-main;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	@extend %font-reg;
+	&:hover, &.active {
+		color: $color-main_hover;
+	}
+
+	// Sizes
+	&.xlg {
+		font-size: $size-xlg;
+		line-height: $size-xlg-lh;
+	}
+	&.lg {
+		font-size: $size-lg;
+		line-height: $size-lg-lh;
+	}
+	&.med {
+		font-size: $size-med;
+		line-height: $size-med-lh;
+	}
+	&.sm {
+		font-size: $size-sm;
+		line-height: $size-sm-lh;
+	}
+	&.xsm {
+		font-size: $size-xsm;
+		line-height: $size-xsm-lh;
+	}
+
+	// Colors
+	&.c-text {
+		color: $color-text;
+		&:hover, &.active {
+			color: $color-text_hover;
+		}
+	}
+	&.c-main {
+		color: $color-main;
+		&:hover, &.active {
+			color: $color-main_hover;
+		}
+	}
+	&.c-done {
+		color: $color-done;
+		&:hover, &.active {
+			color: $color-done_hover;
+		}
+	}
+	&.c-warn{
+		color: $color-warn;
+		&:hover, &.active {
+			color: $color-warn_hover;
+		}
+	}
+	&.c-alert{
+		color: $color-alert;
+		&:hover, &.active {
+			color: $color-alert_hover;
+		}
+	}
+
+	// Modifiers
+	&.u {
+		text-decoration: underline;
+	}
+	&.h-u {
+		text-decoration: none;
+	}
+	&.h-u:hover {
+		text-decoration: underline;
+	}
+	&.u-h-x-u {
+		text-decoration: underline;
+	}
+	&.u-h-x-u:hover {
+		text-decoration: none;
+	}
+	&.x-u {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&.xx-u {
+		text-decoration: none !important;
+		&:hover {
+			text-decoration: none !important;
+		}
+	}
+	&.disabled{
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+}

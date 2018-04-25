@@ -1,0 +1,1514 @@
+// Hide / show helper
+.hide {
+  display: none;
+}
+
+.show {
+  display: auto;
+}
+
+@include respond-to($brk-lg) {
+  .hide--lg {
+    display: none;
+  }
+  .show--lg {
+    display: inherit;
+  }
+}
+
+@include respond-to($brk-med) {
+  .hide--med {
+    display: none;
+  }
+  .show--med {
+    display: inherit;
+  }
+}
+
+@include respond-to($brk-sm) {
+  .hide--sm {
+    display: none;
+  }
+  .show--sm {
+    display: inherit;
+  }
+}
+
+@include respond-to($brk-xsm) {
+  .hide--xsm {
+    display: none;
+  }
+  .show--xsm {
+    display: inherit;
+  }
+}
+
+
+// Responsive text aligns
+
+@include respond-to($brk-lg) {
+  .ta--lg {
+  	&-c {
+  		text-align: center
+  	}
+  	&-r {
+  		text-align: right
+  	}
+  	&-l {
+  		text-align: left
+  	}
+  	&-rr {
+  		text-align: right !important
+  	}
+  	&-ll {
+  		text-align: left !important
+  	}
+  	&-cc {
+  		text-align: center !important
+  	}
+  }
+}
+
+@include respond-to($brk-med) {
+  .ta--med {
+  	&-c {
+  		text-align: center
+  	}
+  	&-r {
+  		text-align: right
+  	}
+  	&-l {
+  		text-align: left
+  	}
+  	&-rr {
+  		text-align: right !important
+  	}
+  	&-ll {
+  		text-align: left !important
+  	}
+  	&-cc {
+  		text-align: center !important
+  	}
+  }
+}
+
+@include respond-to($brk-sm) {
+  .ta--sm {
+  	&-c {
+  		text-align: center
+  	}
+  	&-r {
+  		text-align: right
+  	}
+  	&-l {
+  		text-align: left
+  	}
+  	&-rr {
+  		text-align: right !important
+  	}
+  	&-ll {
+  		text-align: left !important
+  	}
+  	&-cc {
+  		text-align: center !important
+  	}
+  }
+}
+
+@include respond-to($brk-xsm) {
+  .ta--xsm {
+  	&-c {
+  		text-align: center
+  	}
+  	&-r {
+  		text-align: right
+  	}
+  	&-l {
+  		text-align: left
+  	}
+  	&-rr {
+  		text-align: right !important
+  	}
+  	&-ll {
+  		text-align: left !important
+  	}
+  	&-cc {
+  		text-align: center !important
+  	}
+  }
+}
+
+
+// Responsive grids
+
+@include respond-to($brk-lg) {
+  @for $i from 1 through $grid-columns {
+    .col--lg-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@include respond-to($brk-med) {
+  @for $i from 1 through $grid-columns {
+    .col--med-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@include respond-to($brk-sm) {
+  @for $i from 1 through $grid-columns {
+    .col--sm-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@include respond-to($brk-xsm) {
+  @for $i from 1 through $grid-columns {
+    .col--xsm-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+// Responsive paddings
+
+@include respond-to($brk-lg) {
+  .p--lg {
+  	padding: $spacing-reg;
+
+    &-x {
+      padding: 0px !important;
+    }
+
+  	&-xxlg {
+  		padding: $spacing-xxlg
+  	}
+  	&-xlg {
+  		padding: $spacing-xlg
+  	}
+  	&-lg {
+  		padding: $spacing-lg
+  	}
+  	&-med {
+  		padding: $spacing-med
+  	}
+  	&-sm {
+  		padding: $spacing-sm
+  	}
+  	&-xsm {
+  		padding: $spacing-xsm
+  	}
+  	&-xxsm {
+  		padding: $spacing-xxsm
+  	}
+  	&-micro {
+  		padding: $spacing-micro
+  	}
+
+  	&-l {
+  		padding-left: $spacing-reg;
+
+      &-x {
+        padding-left: 0px;
+      }
+
+  		&-xxlg {
+  			padding-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-left: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-left: $spacing-lg
+  		}
+  		&-med {
+  			padding-left: $spacing-med
+  		}
+  		&-sm {
+  			padding-left: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		padding-right: $spacing-reg;
+
+      &-x {
+        padding-right: 0px;
+      }
+
+  		&-xxlg {
+  			padding-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-right: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-right: $spacing-lg
+  		}
+  		&-med {
+  			padding-right: $spacing-med
+  		}
+  		&-sm {
+  			padding-right: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		padding-top: $spacing-reg;
+
+      &-x {
+        padding-top: 0px;
+      }
+
+  		&-xxlg {
+  			padding-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-top: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-top: $spacing-lg
+  		}
+  		&-med {
+  			padding-top: $spacing-med
+  		}
+  		&-sm {
+  			padding-top: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		padding-bottom: $spacing-reg;
+
+      &-x {
+        padding-bottom: 0px;
+      }
+
+  		&-xxlg {
+  			padding-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-bottom: $spacing-lg
+  		}
+  		&-med {
+  			padding-bottom: $spacing-med
+  		}
+  		&-sm {
+  			padding-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-med) {
+  .p--med {
+  	padding: $spacing-reg;
+
+    &-x {
+      padding: 0px;
+    }
+
+  	&-xxlg {
+  		padding: $spacing-xxlg
+  	}
+  	&-xlg {
+  		padding: $spacing-xlg
+  	}
+  	&-lg {
+  		padding: $spacing-lg
+  	}
+  	&-med {
+  		padding: $spacing-med
+  	}
+  	&-sm {
+  		padding: $spacing-sm
+  	}
+  	&-xsm {
+  		padding: $spacing-xsm
+  	}
+  	&-xxsm {
+  		padding: $spacing-xxsm
+  	}
+  	&-micro {
+  		padding: $spacing-micro
+  	}
+
+  	&-l {
+  		padding-left: $spacing-reg;
+
+      &-x {
+        padding-left: 0px;
+      }
+
+  		&-xxlg {
+  			padding-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-left: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-left: $spacing-lg
+  		}
+  		&-med {
+  			padding-left: $spacing-med
+  		}
+  		&-sm {
+  			padding-left: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		padding-right: $spacing-reg;
+
+      &-x {
+        padding-right: 0px;
+      }
+
+  		&-xxlg {
+  			padding-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-right: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-right: $spacing-lg
+  		}
+  		&-med {
+  			padding-right: $spacing-med
+  		}
+  		&-sm {
+  			padding-right: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		padding-top: $spacing-reg;
+
+      &-x {
+        padding-top: 0px;
+      }
+
+  		&-xxlg {
+  			padding-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-top: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-top: $spacing-lg
+  		}
+  		&-med {
+  			padding-top: $spacing-med
+  		}
+  		&-sm {
+  			padding-top: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		padding-bottom: $spacing-reg;
+
+      &-x {
+        padding-bottom: 0px;
+      }
+
+  		&-xxlg {
+  			padding-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-bottom: $spacing-lg
+  		}
+  		&-med {
+  			padding-bottom: $spacing-med
+  		}
+  		&-sm {
+  			padding-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-sm) {
+  .p--sm {
+  	padding: $spacing-reg;
+
+    &-x {
+      padding: 0px;
+    }
+
+  	&-xxlg {
+  		padding: $spacing-xxlg
+  	}
+  	&-xlg {
+  		padding: $spacing-xlg
+  	}
+  	&-lg {
+  		padding: $spacing-lg
+  	}
+  	&-med {
+  		padding: $spacing-med
+  	}
+  	&-sm {
+  		padding: $spacing-sm
+  	}
+  	&-xsm {
+  		padding: $spacing-xsm
+  	}
+  	&-xxsm {
+  		padding: $spacing-xxsm
+  	}
+  	&-micro {
+  		padding: $spacing-micro
+  	}
+
+  	&-l {
+  		padding-left: $spacing-reg;
+
+      &-x {
+        padding-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-left: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-left: $spacing-lg
+  		}
+  		&-med {
+  			padding-left: $spacing-med
+  		}
+  		&-sm {
+  			padding-left: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		padding-right: $spacing-reg;
+
+      &-x {
+        padding-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-right: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-right: $spacing-lg
+  		}
+  		&-med {
+  			padding-right: $spacing-med
+  		}
+  		&-sm {
+  			padding-right: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		padding-top: $spacing-reg;
+
+      &-x {
+        padding-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-top: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-top: $spacing-lg
+  		}
+  		&-med {
+  			padding-top: $spacing-med
+  		}
+  		&-sm {
+  			padding-top: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		padding-bottom: $spacing-reg;
+
+      &-x {
+        padding-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-bottom: $spacing-lg
+  		}
+  		&-med {
+  			padding-bottom: $spacing-med
+  		}
+  		&-sm {
+  			padding-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-xsm) {
+  .p--xsm {
+  	padding: $spacing-reg;
+
+    &-x {
+      padding: 0px !important;
+    }
+
+  	&-xxlg {
+  		padding: $spacing-xxlg
+  	}
+  	&-xlg {
+  		padding: $spacing-xlg
+  	}
+  	&-lg {
+  		padding: $spacing-lg
+  	}
+  	&-med {
+  		padding: $spacing-med
+  	}
+  	&-sm {
+  		padding: $spacing-sm
+  	}
+  	&-xsm {
+  		padding: $spacing-xsm
+  	}
+  	&-xxsm {
+  		padding: $spacing-xxsm
+  	}
+  	&-micro {
+  		padding: $spacing-micro
+  	}
+
+  	&-l {
+  		padding-left: $spacing-reg;
+
+      &-x {
+        padding-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-left: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-left: $spacing-lg
+  		}
+  		&-med {
+  			padding-left: $spacing-med
+  		}
+  		&-sm {
+  			padding-left: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		padding-right: $spacing-reg;
+
+      &-x {
+        padding-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-right: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-right: $spacing-lg
+  		}
+  		&-med {
+  			padding-right: $spacing-med
+  		}
+  		&-sm {
+  			padding-right: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		padding-top: $spacing-reg;
+
+      &-x {
+        padding-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-top: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-top: $spacing-lg
+  		}
+  		&-med {
+  			padding-top: $spacing-med
+  		}
+  		&-sm {
+  			padding-top: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		padding-bottom: $spacing-reg;
+
+      &-x {
+        padding-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			padding-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			padding-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			padding-bottom: $spacing-lg
+  		}
+  		&-med {
+  			padding-bottom: $spacing-med
+  		}
+  		&-sm {
+  			padding-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			padding-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			padding-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			padding-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+// Responsive margins
+
+@include respond-to($brk-lg) {
+  .m--lg {
+  	margin: $spacing-reg;
+
+    &-x {
+      margin: 0px !important;
+    }
+
+  	&-xxlg {
+  		margin: $spacing-xxlg
+  	}
+  	&-xlg {
+  		margin: $spacing-xlg
+  	}
+  	&-lg {
+  		margin: $spacing-lg
+  	}
+  	&-med {
+  		margin: $spacing-med
+  	}
+  	&-sm {
+  		margin: $spacing-sm
+  	}
+  	&-xsm {
+  		margin: $spacing-xsm
+  	}
+  	&-xxsm {
+  		margin: $spacing-xxsm
+  	}
+  	&-micro {
+  		margin: $spacing-micro
+  	}
+
+  	&-l {
+  		margin-left: $spacing-reg;
+
+      &-x {
+        margin-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-left: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-left: $spacing-lg
+  		}
+  		&-med {
+  			margin-left: $spacing-med
+  		}
+  		&-sm {
+  			margin-left: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		margin-right: $spacing-reg;
+
+      &-x {
+        margin-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-right: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-right: $spacing-lg
+  		}
+  		&-med {
+  			margin-right: $spacing-med
+  		}
+  		&-sm {
+  			margin-right: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		margin-top: $spacing-reg;
+
+      &-x {
+        margin-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-top: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-top: $spacing-lg
+  		}
+  		&-med {
+  			margin-top: $spacing-med
+  		}
+  		&-sm {
+  			margin-top: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		margin-bottom: $spacing-reg;
+
+      &-x {
+        margin-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-bottom: $spacing-lg
+  		}
+  		&-med {
+  			margin-bottom: $spacing-med
+  		}
+  		&-sm {
+  			margin-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-med) {
+  .m--med {
+  	margin: $spacing-reg;
+
+    &-x {
+      margin: 0px !important;
+    }
+
+  	&-xxlg {
+  		margin: $spacing-xxlg
+  	}
+  	&-xlg {
+  		margin: $spacing-xlg
+  	}
+  	&-lg {
+  		margin: $spacing-lg
+  	}
+  	&-med {
+  		margin: $spacing-med
+  	}
+  	&-sm {
+  		margin: $spacing-sm
+  	}
+  	&-xsm {
+  		margin: $spacing-xsm
+  	}
+  	&-xxsm {
+  		margin: $spacing-xxsm
+  	}
+  	&-micro {
+  		margin: $spacing-micro
+  	}
+
+  	&-l {
+  		margin-left: $spacing-reg;
+
+      &-x {
+        margin-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-left: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-left: $spacing-lg
+  		}
+  		&-med {
+  			margin-left: $spacing-med
+  		}
+  		&-sm {
+  			margin-left: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		margin-right: $spacing-reg;
+
+      &-x {
+        margin-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-right: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-right: $spacing-lg
+  		}
+  		&-med {
+  			margin-right: $spacing-med
+  		}
+  		&-sm {
+  			margin-right: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		margin-top: $spacing-reg;
+
+      &-x {
+        margin-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-top: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-top: $spacing-lg
+  		}
+  		&-med {
+  			margin-top: $spacing-med
+  		}
+  		&-sm {
+  			margin-top: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		margin-bottom: $spacing-reg;
+
+      &-x {
+        margin-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-bottom: $spacing-lg
+  		}
+  		&-med {
+  			margin-bottom: $spacing-med
+  		}
+  		&-sm {
+  			margin-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-sm) {
+  .m--sm {
+  	margin: $spacing-reg;
+
+    &-x {
+      margin: 0px !important;
+    }
+
+  	&-xxlg {
+  		margin: $spacing-xxlg
+  	}
+  	&-xlg {
+  		margin: $spacing-xlg
+  	}
+  	&-lg {
+  		margin: $spacing-lg
+  	}
+  	&-med {
+  		margin: $spacing-med
+  	}
+  	&-sm {
+  		margin: $spacing-sm
+  	}
+  	&-xsm {
+  		margin: $spacing-xsm
+  	}
+  	&-xxsm {
+  		margin: $spacing-xxsm
+  	}
+  	&-micro {
+  		margin: $spacing-micro
+  	}
+
+  	&-l {
+  		margin-left: $spacing-reg;
+
+      &-x {
+        margin-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-left: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-left: $spacing-lg
+  		}
+  		&-med {
+  			margin-left: $spacing-med
+  		}
+  		&-sm {
+  			margin-left: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		margin-right: $spacing-reg;
+
+      &-x {
+        margin-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-right: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-right: $spacing-lg
+  		}
+  		&-med {
+  			margin-right: $spacing-med
+  		}
+  		&-sm {
+  			margin-right: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		margin-top: $spacing-reg;
+
+      &-x {
+        margin-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-top: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-top: $spacing-lg
+  		}
+  		&-med {
+  			margin-top: $spacing-med
+  		}
+  		&-sm {
+  			margin-top: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		margin-bottom: $spacing-reg;
+
+      &-x {
+        margin-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-bottom: $spacing-lg
+  		}
+  		&-med {
+  			margin-bottom: $spacing-med
+  		}
+  		&-sm {
+  			margin-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-bottom: $spacing-micro
+  		}
+  	}
+  }
+}
+
+@include respond-to($brk-xsm) {
+  .m--xsm {
+  	margin: $spacing-reg;
+
+    &-x {
+      margin: 0px !important;
+    }
+
+  	&-xxlg {
+  		margin: $spacing-xxlg
+  	}
+  	&-xlg {
+  		margin: $spacing-xlg
+  	}
+  	&-lg {
+  		margin: $spacing-lg
+  	}
+  	&-med {
+  		margin: $spacing-med
+  	}
+  	&-sm {
+  		margin: $spacing-sm
+  	}
+  	&-xsm {
+  		margin: $spacing-xsm
+  	}
+  	&-xxsm {
+  		margin: $spacing-xxsm
+  	}
+  	&-micro {
+  		margin: $spacing-micro
+  	}
+
+  	&-l {
+  		margin-left: $spacing-reg;
+
+      &-x {
+        margin-left: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-left: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-left: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-left: $spacing-lg
+  		}
+  		&-med {
+  			margin-left: $spacing-med
+  		}
+  		&-sm {
+  			margin-left: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-left: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-left: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-left: $spacing-micro
+  		}
+  	}
+
+  	&-r {
+  		margin-right: $spacing-reg;
+
+      &-x {
+        margin-right: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-right: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-right: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-right: $spacing-lg
+  		}
+  		&-med {
+  			margin-right: $spacing-med
+  		}
+  		&-sm {
+  			margin-right: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-right: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-right: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-right: $spacing-micro
+  		}
+  	}
+
+  	&-t {
+  		margin-top: $spacing-reg;
+
+      &-x {
+        margin-top: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-top: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-top: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-top: $spacing-lg
+  		}
+  		&-med {
+  			margin-top: $spacing-med
+  		}
+  		&-sm {
+  			margin-top: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-top: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-top: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-top: $spacing-micro
+  		}
+  	}
+
+  	&-b {
+  		margin-bottom: $spacing-reg;
+
+      &-x {
+        margin-bottom: 0px !important;
+      }
+
+  		&-xxlg {
+  			margin-bottom: $spacing-xxlg
+  		}
+  		&-xlg {
+  			margin-bottom: $spacing-xlg
+  		}
+  		&-lg {
+  			margin-bottom: $spacing-lg
+  		}
+  		&-med {
+  			margin-bottom: $spacing-med
+  		}
+  		&-sm {
+  			margin-bottom: $spacing-sm
+  		}
+  		&-xsm {
+  			margin-bottom: $spacing-xsm
+  		}
+  		&-xxsm {
+  			margin-bottom: $spacing-xxsm
+  		}
+  		&-micro {
+  			margin-bottom: $spacing-micro
+  		}
+  	}
+  }
+}

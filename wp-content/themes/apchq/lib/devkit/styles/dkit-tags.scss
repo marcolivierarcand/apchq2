@@ -1,0 +1,90 @@
+.tag {
+	display: inline-block;
+	font-size: $size-reg;
+	line-height: $size-reg-lh;
+	@extend %font-reg;
+	text-decoration: none;
+	border: 1px solid transparent;
+	padding: $spacing-tags-reg;
+	background-color: $color-main;
+	color: white;
+
+	// Colors
+	&.outline, &.c-main-outline {
+		background-color: transparent;
+		border-color: $color-main;
+		color: $color-main;
+	}
+	&.c-main {
+		background-color: $color-main;
+		border-color: $color-main;
+		color: white;
+	}
+	&.c-done {
+		background-color: $color-done;
+		border-color: $color-done;
+		color: white;
+	}
+	&.c-done-outline {
+		background-color: transparent;
+		border-color: $color-done;
+		color: $color-done;
+	}
+	&.c-warn {
+		background-color: $color-warn;
+		border-color: $color-warn;
+		color: white;
+	}
+	&.c-warn-outline {
+		background-color: transparent;
+		border-color: $color-warn;
+		color: $color-warn;
+	}
+	&.c-alert {
+		background-color: $color-alert;
+		border-color: $color-alert;
+		color: white;
+	}
+	&.c-alert-outline {
+		background-color: transparent;
+		border-color: $color-alert;
+		color: $color-alert;
+	}
+	&.c-light {
+		background-color: $color-light;
+		border-color: $color-light;
+		color: $color-text;
+	}
+	&.c-light-outline {
+		background-color: transparent;
+		border-color: $color-light;
+		color: $color-text;
+	}
+
+	// Sizes
+	&.xlg {
+		padding: $spacing-tags-xlg;
+		font-size: $size-xlg;
+		line-height: $size-xlg-lh;
+	}
+	&.lg {
+		padding: $spacing-tags-lg;
+		font-size: $size-lg;
+		line-height: $size-lg-lh;
+	}
+	&.med {
+		padding: $spacing-tags-med;
+		font-size: $size-med;
+		line-height: $size-med-lh;
+	}
+	&.sm {
+		padding: $spacing-tags-sm;
+		font-size: $size-sm;
+		line-height: $size-sm-lh;
+	}
+	&.xsm {
+		padding: $spacing-tags-xsm;
+		font-size: $size-xsm;
+		line-height: $size-xsm-lh;
+	}
+}

@@ -1,0 +1,28 @@
+/**
+	Contains styles for:
+	* .size-<font size>
+*/
+.size-xlg {
+  font-size: $size-xlg;
+  line-height: $size-xlg-lh;
+}
+.size-lg {
+  font-size: $size-lg;
+  line-height: $size-lg-lh;
+}
+.size-med {
+  font-size: $size-med;
+  line-height: $size-med-lh;
+}
+.size-reg {
+  font-size: $size-reg;
+  line-height: $size-reg-lh;
+}
+.size-sm {
+  font-size: $size-sm;
+  line-height: $size-sm-lh;
+}
+.size-xsm {
+  font-size: $size-xsm;
+  line-height: $size-xsm-lh;
+}

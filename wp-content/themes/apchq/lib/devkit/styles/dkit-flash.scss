@@ -1,0 +1,81 @@
+.flash{
+	border: 1px solid transparent;
+	border-radius: 3px;
+
+	&.c-main{
+		border-color: $color-main;
+		background-color: $color-main;
+		&.op{
+			border-color: rgba($color-main, 0.3);
+			background-color: rgba($color-main, 0.1);
+		}
+	}
+
+	&.c-alert{
+		border-color: $color-alert;
+		background-color: $color-alert;
+		&.op{
+			border-color: rgba($color-alert, 0.3);
+			background-color: rgba($color-alert, 0.1);
+		}
+	}
+
+	&.c-warn{
+		border-color: $color-warn;
+		background-color: $color-warn;
+		&.op{
+			border-color: rgba($color-warn, 0.3);
+			background-color: rgba($color-warn, 0.1);
+		}
+	}
+
+	&.c-done{
+		border-color: $color-done;
+		background-color: $color-done;
+		&.op{
+			border-color: rgba($color-done, 0.3);
+			background-color: rgba($color-done, 0.1);
+		}
+	}
+}
+
+.flash-explain{
+	border-left: 4px solid;
+
+	&.c-main{
+		border-color: $color-main;
+		background-color: $color-light;
+		&.op{
+			border-color: rgba($color-main, 0.3);
+			background-color: rgba($color-main, 0.1);
+		}
+	}
+
+	&.c-alert{
+		border-color: $color-alert;
+		background-color: $color-light;
+		&.op{
+			border-color: rgba($color-alert, 0.3);
+			background-color: rgba($color-alert, 0.1);
+		}
+	}
+
+	&.c-warn{
+		border-color: $color-warn;
+		background-color: $color-light;
+		&.op{
+			border-color: rgba($color-warn, 0.3);
+			background-color: rgba($color-warn, 0.1);
+		}
+	}
+
+	&.c-done{
+		border-color: $color-done;
+		background-color: $color-light;
+		&.op{
+			border-color: rgba($color-done, 0.3);
+			background-color: rgba($color-done, 0.1);
+		}
+	}
+
+}
